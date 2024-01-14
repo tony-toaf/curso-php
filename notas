@@ -1,0 +1,26 @@
+-----------permisos de carpeta para que el sistema permita la escritura-----
+sudo chown www-data:www-data nombre_de_la_carpeta
+
+
+video actual 47, 48 inyeccion sql
+importacion de excel con formato odt para sql
+
+evitar inyeccion sql mysqly_real_scape_string(); 
+
+msqli_affeted_rows(conexion como argumento) > 0;para ver si hay consultas
+
+
+video 49 consultas preradas evitan inyeccion sql 08:20 inicia el video, practicado hasta 12:54
+
+video 51 conexion a bases con poo
+
+---------pendiente de 52 al 54
+
+video 55 diferencia entre get y post
+
+video 57 conexion con poo bien explicado 
+
+-----58 pendiente 
+
+video 59 sistema de login ---importante
+

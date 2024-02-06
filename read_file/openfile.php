@@ -1,30 +1,27 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carpetas en el Escritorio de tony</title>
-</head>
-<body>
 
-<h1>Carpetas en el Escritorio de tony</h1>
+<?php //codigo que permite leer archivos guardados en carpetas 
+//tener en cuenta los permisos de la carpeta
+    
 
-<?php
-<?php
-// Ruta de la carpeta que quieres listar
-$ruta = '/var/www/html/curso/archivos';
+/* utilizar esta linea en el archivo a utilizar  <?php include 'openfile.php'; ?>*/
 
-// Abre el directorio
-if ($gestor = opendir($ruta)) {
-    // Lee los contenidos del directorio
-    while (false !== ($archivo = readdir($gestor))) {
-        // Excluye los directorios "." y ".."
-        if ($archivo != "." && $archivo != "..") {
-            echo $archivo . "<br>";
+$directorio = 'archivos/'; // Cambia 'archivos/' por la ruta de tu directorio de archivos
+if (is_dir($directorio)) {
+    if ($dh = opendir($directorio)) {
+        while (($archivo = readdir($dh)) !== false) {
+
+            if ($archivo != '.' && $archivo != '..') {
+
+                echo '<li><a href="' . $directorio . $archivo . '" download>' . $archivo . '</a></li>';
+            }
         }
+        closedir($dh);
     }
-
-    // Cierra el gestor de directorios
-    closedir($gestor);
 }
 ?>
+
+
+
+
+
+

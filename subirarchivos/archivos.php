@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-
-	<title>subir archivos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Archivos</title>
 </head>
 <body>
 
-	<!-- columna de subir archivos -->
-	<form action="subiendo.php" method="post" enctype="multipart/form-data"> <!-- importante para que se de cuenta que son archivos -->
+<form action="subiendo.php" method="post" enctype="multipart/form-data">
+    <label for="file">Seleccionar Archivo:</label>
+    <input type="file" name="files[]" id="file" enctype="multipart/form-data">
+    <br>
+    <label for="description">Descripción:</label>
+    <input type="text" name="description[]" id="description">
+    <br>
+    <label for="folder">Seleccionar Carpeta:</label>
+    <select name="folder">
+        
+        <option value="carpeta1">Carpeta 1</option>
+        <option value="carpeta2">Carpeta 2</option>
+        <!-- Puedes agregar más opciones según sea necesario -->
+    </select>
+    <br>
+    <input type="submit" value="Subir Archivos" name="submit">
+</form>
 
-		<label for="">subir imagen</label><br>
-		<input type="file" name="file"><br>
-
-		<label for="">Descripsion del archivo</label><br>
-		<input type="text" name="descripsion"><br>
-
-
-		<label for=""></label>
-		<input type="submit" value="subir" > 
-
-	</form>
-
-
-
-	</body>
-	</html>
+</body>
+</html>

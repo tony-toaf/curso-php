@@ -4,7 +4,7 @@
 $numero =0;
 
 if($numero > 0){
-	echo "todo ha ido bien";
+	echo "todo ha ido bien po fin";
 
 }else{
 

@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- codigo funcional para crear carpetas -->
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +8,8 @@
     <title>Manejo de Carpetas</title>
 </head>
 <body>
+
+
 
     <!-- Formulario para crear carpetas -->
     <form action="crearcarpeta.php" method="post">
@@ -28,16 +32,9 @@
         </select>
         <br>
 
-        <label for="">Seleccionar Sub Carpeta:</label>
-        <select name="">
-          
-
-        </select>
-        <br>
-
         <input type="submit" value="Crear Carpeta" name="submit">
         <input type="submit" value="Crear Sub Carpeta" name="subcarpeta" formaction="subcarpeta.php">
-        <input type="submit" value="Listar Carpeta" name="listar" formaction="listarcarpetas.php">
+        <input type="submit" value="Listar Archivos" name="listar" formaction="listarcarpetas.php">
         <input type="submit" value="Eliminar Carpeta" name="eliminar" formaction="eliminarcarpeta.php">
 
     </form>
